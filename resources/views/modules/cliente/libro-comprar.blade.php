@@ -78,7 +78,15 @@
                                                     <p class="m-0 p-0"><b>Sinopsis:</b> {{$book->description}}</p>
                                                 </li>
                                                 <li class="mt-2 list-unstyled">
-                                                    <p class="m-0 p-0"> <a href="#" class="btn btn-naranja w-100"><i class="fa-solid fa-cart-plus"></i> Comprar  <b>{{ $book->costo}}</b> </a></p>
+                                                    <p class="m-0 p-0">
+                                                        <form action="{{ Route('books.shoop') }}" method="post">
+                                                            @csrf
+                                                            @method('POST')
+                                                            <input type="hidden" name="idUser" id="idUser" value="{{ $user->id }}">
+                                                            <input type="hidden" name="idBook" id="idBook" value="{{ $book->id }}">
+                                                            <button type="submit" class="btn btn-naranja w-100"><i class="fa-solid fa-cart-plus"></i> Comprar  <b>{{ $book->costo}}</b></button>
+                                                        </form> 
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </div>

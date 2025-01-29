@@ -82,7 +82,7 @@
 
             </div>
 
-            <div class="col-12 col-md-2 col-lg-3 p-3 m-0 bg-light">
+            <div class="col-12 col-md-2 col-lg-3 p-0 m-0 bg-light">
                 <x-infort></x-infort>
             </div>
 

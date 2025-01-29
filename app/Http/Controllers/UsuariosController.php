@@ -20,12 +20,10 @@ class UsuariosController extends Controller
         return view('modules/empleado/registroUsuarios', compact('items'));
     }
 
-
     public function create()
     {
         return view('modules/empleado/registroUsuarios-crear');
     }
-
 
     public function store(StoreUsuarioRequest $request)
     {

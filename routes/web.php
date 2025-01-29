@@ -5,6 +5,7 @@ use App\Http\Controllers\Users;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadosController;
 use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\facturaControllers;
 
 
 Route::middleware("guest")->group(function () {
@@ -27,6 +28,10 @@ Route::middleware("auth")->group(function () {
     Route::resource('usuarios', UsuariosController::class);
     Route::resource('empleados', EmpleadosController::class);
     Route::resource('books', BooksController::class);
+    Route::resource('facturas', facturaControllers::class);
+    Route::post('/booksShoop', [BooksController::class, 'shoop'])->name('books.shoop');
+    Route::get('/booksRead', [Users::class, 'read'])->name('books.read');
+    Route::get('/booksRead/{books}', [BooksController::class, 'readBooks'])->name('books.readBooks');
     Route::get('/registroBooks', [BooksController::class, 'inventario'])->name('books.inventario'); 
     Route::post('/BooksSearch', [BooksController::class, 'search'])->name('books.search'); 
 

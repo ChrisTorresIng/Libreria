@@ -12,12 +12,8 @@
         <i class="fa-solid fa-magnifying-glass"></i>Buscar Libro
     </a>
 
-    <a href="#" class="list-group-item list-group-item-action btn btn-outline-violeta text-start p-3">
-        <i class="fa-solid fa-book"></i> Libros descargados
-    </a>
-
-    <a href="#" class="list-group-item list-group-item-action btn btn-outline-violeta text-start p-3">
-        <i class="fa-solid fa-chart-column"></i> Movimiento en linea
+    <a href="{{ route('books.read')}}" class="list-group-item list-group-item-action btn btn-outline-violeta text-start p-3">
+        <i class="fa-solid fa-book"></i> Libros comprados
     </a>
 
     <a href="{{ Route('empleados.index')}}" class="list-group-item list-group-item-action btn btn-outline-violeta text-start p-3">
@@ -32,7 +28,12 @@
         <i class="fa-solid fa-list"></i> Inventario
     </a>
 
-    <a href="#" class="list-group-item list-group-item-action btn btn-outline-violeta text-start p-3">
+    <a href=" {{ route('facturas.index')}} " class="list-group-item list-group-item-action btn btn-outline-violeta text-start p-3">
         <i class="fa-solid fa-file-invoice-dollar"></i> Ventas
     </a>
+
+    <a href=" {{ Route('users.logout') }}" class="list-group-item list-group-item-action btn btn-outline-violeta text-start p-3">
+        <i class="fas fa-door-open"></i> cerrar sesión
+    </a>
+
 </div>

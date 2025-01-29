@@ -55,6 +55,16 @@
                                                 @enderror
                                             </span>
                                         </label>
+
+                                        <label for="costo" class="w-100 ms-3">Precio:
+                                            <input type="text" name="costo" id="costo" placeholder="Ingrese..."
+                                                class="form-control w-100" maxlength="120" value="{{ old('costo') }}">
+                                            <span class="m-0 p-0 text-danger">
+                                                @error('costo')
+                                                    {{ $message }}
+                                                @enderror
+                                            </span>
+                                        </label>
                                     </div>
 
                                     <div class="form-group d-inline-flex d-md-inline-block d-lg-flex">
@@ -136,6 +146,18 @@
                                             <span class="m-0 p-0 text-danger">
                                                 <span class="m-0 p-0 text-danger">
                                                     @error('front_page')
+                                                        {{ $message }}
+                                                    @enderror
+                                                </span>
+                                            </span>
+                                        </label>
+
+                                        <label for="pdf" class="me-3 w-100">Libro:
+                                            <input type="file" name="pdf" id="pdf" class="form-control"
+                                                value="{{ old('pdf') }}">
+                                            <span class="m-0 p-0 text-danger">
+                                                <span class="m-0 p-0 text-danger">
+                                                    @error('pdf')
                                                         {{ $message }}
                                                     @enderror
                                                 </span>

@@ -37,9 +37,7 @@
                                 </x-alert>
                             </div>
                         @endif
-                        <div class="d-flex justify-content-end">
-                            {{ $books->links() }}
-                        </div>
+                        
                         <div class="col-12 col-md-12 col-lg-11">
                             <h2 class="text-dark text-center h4 text-capitalize fontNav">Libros Registrados</h2>
                             <div
@@ -49,7 +47,6 @@
                                         <tr>
                                             <th scope="col">titulo </th>
                                             <th scope="col">Autor(a)</th>
-                                            <th scope="col">Sinopsis</th>
                                             <th scope="col">Año</th>
                                             <th scope="col" colspan="2"><a href="{{ Route('books.create') }}"
                                                     class="btn btn-verde btn-sm w-100"><i class="fa-solid fa-book"></i>
@@ -64,7 +61,6 @@
                                                 <td>
                                                     {{ $book->autor }}
                                                 </td>
-                                                <td> {{ $book->description }} </td>
                                                 <td> {{ $book->publication_year }} </td>
                                                 <td> <a href="{{ Route('books.edit', $book) }}" class="btn btn-naranja icono-abajo btn-sm"><i class="fa-solid fa-user-pen"></i> Editar</a> </td>
                                                 <td>
@@ -86,6 +82,9 @@
                                 </table>
 
                             </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            {{ $books->links() }}
                         </div>
 
                     </div>

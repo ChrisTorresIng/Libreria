@@ -30,7 +30,7 @@
                                     <div class="row w-100">
 
                                         <div class="col-12 col-md-4 col-lg-3">
-                                            <img src="{{ asset('assets/img/user.png') }}" class="w-100 h-100 p-2 border-2 border border-radius-5">
+                                            <img src="{{ asset('assets/img/perfil/'.$usuario->avatar) }}" class="w-100 h-100 p-2 border-2 border border-radius-5">
                                         </div>
                                     </div>
                                 </div>

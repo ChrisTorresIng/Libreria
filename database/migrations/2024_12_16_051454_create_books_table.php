@@ -22,6 +22,7 @@ return new class extends Migration
             $table->text('language');
             $table->text('front_page');
             $table->text('costo');
+            $table->text('pdf');
         });
     }
 

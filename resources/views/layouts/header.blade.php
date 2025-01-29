@@ -17,9 +17,8 @@
                             <i class="far fa-user"></i> Usuario
                         </a>
                         <ul class="dropdown-menu bg-gradiant-violeta" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item icono-abajo" href=" {{ Route('users.perfil')}} "><i class="fas fa-user-circle"></i> perfil</a></li>
-                            <li><a class="dropdown-item icono-abajo" href="#"><i class="fab fa-shopify"></i> comprar</a></li>
-                            <li><a class="dropdown-item icono-abajo" href="#"><i class="fas fa-chart-bar"></i> Movimiento en linea</a></li>
+                            <li><a class="dropdown-item p-2" href=" {{ Route('users.perfil')}}"><i class="fas fa-user-circle"></i> perfil</a></li>
+                            <li><a class="dropdown-item p-2" href="{{ route('books.read')}}"><i class="fab fa-shopify"></i>Libros comprados</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -31,10 +30,10 @@
                             <i class="fas fa-user-shield"></i> Administrador
                         </a>
                         <ul class="dropdown-menu bg-gradiant-violeta" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item icono-abajo" href="{{ route('empleados.index')}} "><i class="fas fa-user-tie"></i> Empleados</a></li>
-                            <li><a class="dropdown-item icono-abajo" href=" {{ route('usuarios.index')}} "><i class="fas fa-users"></i> Usuarios</a></li>
-                            <li><a class="dropdown-item icono-abajo" href="{{ route('books.inventario')}}"><i class="fas fa-list"></i> Inventario</a></li>
-                            <li><a class="dropdown-item icono-abajo" href="#"><i class="fas fa-dolly-flatbed"></i> Ventas</a></li>
+                            <li><a class="dropdown-item p-2" href="{{ route('empleados.index')}} "><i class="fas fa-user-tie"></i> Empleados</a></li>
+                            <li><a class="dropdown-item p-2" href=" {{ route('usuarios.index')}} "><i class="fas fa-users"></i> Usuarios</a></li>
+                            <li><a class="dropdown-item p-2" href="{{ route('books.inventario')}}"><i class="fas fa-list"></i> Inventario</a></li>
+                            <li><a class="dropdown-item p-2" href=" {{ route('facturas.index')}} "><i class="fas fa-dolly-flatbed"></i> Ventas</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

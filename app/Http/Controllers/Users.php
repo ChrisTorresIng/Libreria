@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Book;
+use App\Models\factura;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Hash;
 use PhpParser\Node\Stmt\Return_;
 use Illuminate\Support\Facades\Session;
@@ -96,6 +99,20 @@ class Users extends Controller
         $user = Auth::User();
         auth()->user();
         return view('modules/cliente/usuario-perfil', compact('user'));
+    }
+
+    public function read(){
+        $facturas = factura::leftJoin('books', 'facturas.id_book', '=', 'books.id')
+        // ->leftJoin('users', 'facturas.id_user', '=', 'users.id')
+        ->where('facturas.id_user', Auth::id())
+        ->select('facturas.*', 'books.title as title','books.autor as autor', 'facturas.created_at as date_buy' )
+        ->get();
+        return view('modules/cliente/libro-comprados', compact('facturas'));
+    }
+
+    public function readBooks(Book $book){
+        $books = Book::find($book);
+        return view('modules/cliente/libro-leer', compact('books'));
     }
 
 }

@@ -34,6 +34,7 @@ class BooksSeeder extends Seeder
                 'language' => 'Español',
                 'front_page' => 'HarryPotterPiedraFilosofal.jpg',
                 'costo' => '$22,00',
+                'pdf' => 'Rowling, J. K. -  Harry Potter y la piedra filosofal.pdf',
             ],
             [
                 'title' => 'Harry Potter y la cámara secreta',
@@ -43,7 +44,8 @@ class BooksSeeder extends Seeder
                 'category' => 'Fantasía',
                 'language' => 'Español',
                 'front_page' => 'HarryPotterYLaCamaraDeLosSecretos.jpg',
-                'costo' => '$20,00',
+                'costo' => '$25,00',
+                'pdf' => 'Rowling, J. K. - Harry Potter y la camara secreta.pdf',
             ],
             [
                 'title' => 'Harry Potter y el prisionero de Azkaban',
@@ -53,7 +55,8 @@ class BooksSeeder extends Seeder
                 'category' => 'Fantasía',
                 'language' => 'Español',
                 'front_page' => 'HarryPotterPrisioneroAzkaban.jpg',
-                'costo' => '$30,00',
+                'costo' => '$20,00',
+                'pdf' => 'Rowling, J.K. - Harry Potter y el prisionero de Azkaban.pdf',
             ],
             [
                 'title' => 'Harry Potter y el cáliz de fuego',
@@ -63,7 +66,8 @@ class BooksSeeder extends Seeder
                 'category' => 'Fantasía',
                 'language' => 'Español',
                 'front_page' => 'HarryPotterCalizDeFuego.jpg',
-                'costo' => '$20,00',
+                'costo' => '$22,00',
+                'pdf' => 'Rowling, J.K. -  Harry Potter y el caliz de fuego.pdf',
             ],
             [
                 'title' => 'Harry Potter y la orden del Fénix',
@@ -73,7 +77,8 @@ class BooksSeeder extends Seeder
                 'category' => 'Fantasía',
                 'language' => 'Español',
                 'front_page' => 'HarryPotterOrdenFenix.jpg',
-                'costo' => '$25,00',
+                'costo' => '$22,00',
+                'pdf' => 'Rowling, J.K. - Harry Potter y la Orden del Fenix.pdf',
             ],
         ]);
     }

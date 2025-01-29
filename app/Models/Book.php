@@ -19,5 +19,6 @@ class Book extends Model
         'language',
         'front_page',
         'costo',
+        'pdf',
     ];
 }

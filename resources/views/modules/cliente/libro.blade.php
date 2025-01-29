@@ -101,7 +101,7 @@
                                         </div>
                                         <div
                                             class="col-6 col-md-4 col-lg-4 border border-2 p-2 d-flex justify-content-center align-items-center">
-                                            <p class="m-0 p-0"><b>Fomato:</b> EPUB</p>
+                                            <p class="m-0 p-0"><b>Fomato:</b> PDF</p>
                                         </div>
                                         <div
                                             class="col-12 col-md-4 col-lg-4 border border-2 p-2 d-flex justify-content-center align-items-center">

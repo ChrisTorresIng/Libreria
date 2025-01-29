@@ -56,6 +56,16 @@
                                             </span>
                                         </label>
 
+                                        <label for="costo" class="w-100">Precio:
+                                            <input type="text" name="costo" id="costo" placeholder="Ingrese..."
+                                                class="form-control w-100" maxlength="120" value="{{ old('costo', $book->costo) }}">
+                                            <span class="m-0 p-0 text-danger">
+                                                @error('costo')
+                                                    {{ $message }}
+                                                @enderror
+                                            </span>
+                                        </label>
+
                                     </div>
 
                                     <div class="form-group d-inline-block d-md-inline-block d-lg-flex">

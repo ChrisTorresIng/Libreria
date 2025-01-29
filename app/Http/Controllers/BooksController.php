@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBooksRequest;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Book;
+use App\Models\factura;
 use Illuminate\Http\Request;
 
 class BooksController extends Controller
@@ -44,8 +46,10 @@ class BooksController extends Controller
      * Display the specified resource.
      */
     public function show(Book $book)
-    {
-        return view('modules/cliente/libro-comprar', compact('book'));
+    {   
+        $user = Auth::User();
+        auth()->user();
+        return view('modules/cliente/libro-comprar', compact('book', 'user'));
     }
 
     public function search(request $request, Book $book)
@@ -90,5 +94,20 @@ class BooksController extends Controller
     {
         $book->delete();
         return redirect()->route('books.inventario')->with('success', 'El libro ' . $book->title . ' se eliminó.');
+    }
+
+    public function shoop(Request $request)
+    {
+        $venta = new factura();
+        $venta->id_user = $request->idUser;
+        $venta->id_book = $request->idBook;
+        $venta->save(); 
+        return redirect()->route('books.index')->with('success', 'La compra del libro se realizó correctamente.');
+    }
+
+    public function readBooks(String $book)
+    {   
+        $books = Book::find($book);
+        return view('modules/cliente/libro-leer', compact('books'));
     }
 }
